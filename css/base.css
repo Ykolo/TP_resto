@@ -2,7 +2,7 @@
 /* couleur contraste : rgb(238,144,9) */
 
 :root{
-    --largeurPage: 900px;
+    --largeurPage: 1100px;
     --largeurMenuCont : 200px;
     --margeCalc: calc((100% - var(--largeurPage)) / 2);
     --margeMenuHaut : 15px;

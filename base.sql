@@ -97,7 +97,12 @@ INSERT INTO `critiquer` (`idR`, `mailU`, `note`, `commentaire`) VALUES
 (7, 'nicolas.harispe@gmail.com', 5, 'Excellent.'),
 (8, 'test@bts.sio', 1, NULL),
 (8, 'yann@lechambon.fr', 4, NULL),
-(9, 'mathieu.capliez@gmail.com', 4, 'Très bon accueil :)');
+(9, 'mathieu.capliez@gmail.com', 4, 'Très bon accueil :)'),
+(12, 'yann@lechambon.fr', 5, NULL),
+(12, 'mathieu.capliez@gmail.com', 5, NULL),
+(12, 'nicolas.harispe@gmail.com', 5, NULL),
+(12, 'alex.garat@gmail.com', 5, NULL),
+(12, 'jj.soueix@gmail.com', 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -118,6 +123,7 @@ CREATE TABLE `photo` (
 INSERT INTO `photo` (`idP`, `cheminP`, `idR`) VALUES
 (0, 'entrepote.jpg', 1),
 (2, 'sapporo.jpg', 3),
+(3, 'entrepote.jpg', 1),
 (4, 'barDuCharcutier.jpg', 2),
 (6, 'cidrerieDuFronton.jpg', 4),
 (7, 'agadir.jpg', 5),
@@ -128,7 +134,10 @@ INSERT INTO `photo` (`idP`, `cheminP`, `idR`) VALUES
 (12, 'barDuMarche.jpg', 10),
 (13, 'trinquetModerne.jpg', 11),
 (14, 'cidrerieDuFronton2.jpg', 4),
-(15, 'cidrerieDuFronton3.jpg', 4);
+(15, 'cidrerieDuFronton3.jpg', 4),
+(16, 'Cantina.jpg', 12),
+(17, 'Crepe.jpg', 12),
+(18, 'Crepe-sucre.jpg',12);
 
 -- --------------------------------------------------------
 
@@ -198,8 +207,8 @@ INSERT INTO `proposer` (`idR`, `idTC`) VALUES
 (9, 10),
 (10, 1),
 (11, 1),
-(11, 10);
-
+(11, 10),
+(12, 7);
 -- --------------------------------------------------------
 
 --
@@ -234,7 +243,8 @@ INSERT INTO `resto` (`idR`, `nomR`, `numAdrR`, `voieAdrR`, `cpR`, `villeR`, `lat
 (8, 'La table de POTTOKA', '21', 'Quai Amiral Dubourdieu', '64100', 'Bayonne', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11h45 à 14h30</td>\r\n            <td class=\"cell\">de 11h45 à 15h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">de 18h45 à 22h30</td>\r\n            <td class=\"cell\">de 18h45 à 1h</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 23h</td>\r\n            <td class=\"cell\">de 11h30 à 2h</td>\r\n        </tr>\r\n    </tbody>\r\n</table>'),
 (9, 'La Rotisserie du Roy Léon', '8', 'rue de coursic', '64100', 'Bayonne', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11h45 à 14h30</td>\r\n            <td class=\"cell\">de 11h45 à 15h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">de 18h45 à 22h30</td>\r\n            <td class=\"cell\">de 18h45 à 1h</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 23h</td>\r\n            <td class=\"cell\">de 11h30 à 2h</td>\r\n        </tr>\r\n    </tbody>\r\n</table>'),
 (10, 'Bar du Marché', '39', 'Rue des Basques', '64100', 'Bayonne', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11h45 à 14h30</td>\r\n            <td class=\"cell\">de 11h45 à 15h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">de 18h45 à 22h30</td>\r\n            <td class=\"cell\">de 18h45 à 1h</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 23h</td>\r\n            <td class=\"cell\">de 11h30 à 2h</td>\r\n        </tr>\r\n    </tbody>\r\n</table>'),
-(11, 'Trinquet Moderne', '60', 'Avenue Dubrocq', '64100', 'Bayonne', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11h45 à 14h30</td>\r\n            <td class=\"cell\">de 11h45 à 15h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">de 18h45 à 22h30</td>\r\n            <td class=\"cell\">de 18h45 à 1h</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 23h</td>\r\n            <td class=\"cell\">de 11h30 à 2h</td>\r\n        </tr>\r\n    </tbody>\r\n</table>');
+(11, 'Trinquet Moderne', '60', 'Avenue Dubrocq', '64100', 'Bayonne', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11h45 à 14h30</td>\r\n            <td class=\"cell\">de 11h45 à 15h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">de 18h45 à 22h30</td>\r\n            <td class=\"cell\">de 18h45 à 1h</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 23h</td>\r\n            <td class=\"cell\">de 11h30 à 2h</td>\r\n        </tr>\r\n    </tbody>\r\n</table>'),
+(12, 'Cantina', '26', 'Rue Mouffetard', '75005', 'Paris', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11 à 17h00</td>\r\n            <td class=\"cell\">de 11h00 à 17h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">Fermé</td>\r\n            <td class=\"cell\">Fermé</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 17h00</td>\r\n            <td class=\"cell\">de 11h00 à 17h00</td>\r\n        </tr>\r\n    </tbody>\r\n</table>');
 
 -- --------------------------------------------------------
 
@@ -387,3 +397,13 @@ ALTER TABLE `proposer`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+
+
+-- DELETE FROM photo WHERE idp = 3;
+-- UPDATE resto SET 
+-- INSERT INTO `resto` (`idR`, `nomR`, `numAdrR`, `voieAdrR`, `cpR`, `villeR`, `latitudeDegR`, `longitudeDegR`, `descR`, `horairesR`) VALUES (12, 'Cantina', '26', 'Rue Mouffetard', '75005', 'Paris', NULL, NULL, 'description', '<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Ouverture</th><th>Semaine</th>	<th>Week-end</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td class=\"label\">Midi</td>\r\n            <td class=\"cell\">de 11 à 17h00</td>\r\n            <td class=\"cell\">de 11h00 à 17h00</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">Soir</td>\r\n            <td class=\"cell\">Fermé</td>\r\n            <td class=\"cell\">Fermé</td>	\r\n        </tr>\r\n        <tr>\r\n            <td class=\"label\">À emporter</td>\r\n            <td class=\"cell\">de 11h30 à 17h00</td>\r\n            <td class=\"cell\">de 11h00 à 17h00</td>\r\n        </tr>\r\n    </tbody>\r\n</table>');
+-- INESRT INTO `proposer` (`idR`, `idTC`) VALUES (12,7);
