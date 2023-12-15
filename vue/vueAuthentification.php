@@ -7,7 +7,7 @@
 
 </form>
 <br />
-<a href="./?action=inscription">Inscription</a>
+<p>Pas encore de compte ? <a href="./?action=inscription">Créer un compte</a></p>
 
 <hr>
 Utilisateur de test : <br />
