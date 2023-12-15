@@ -14,9 +14,9 @@
         case "adresse":
             ?>
             Recherche par adresse : <br />
-            <input type="text" name="villeR" placeholder="ville" value="<?= $villeR ?>"/><br />
-            <input type="text" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/><br />
-            <input type="text" name="voieAdrR" placeholder="rue" value="<?= $voieAdrR ?>"/><br />
+            <p style="color: red">Ville <input type="text" name="villeR" placeholder="ville" value="<?= $villeR ?>"/><br /></p>
+            <p style="color: red">Code Postal <input type="text" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/><br /></p>
+            <p style="color: red">Rue <input type="text" name="voieAdrR" placeholder="rue" value="<?= $voieAdrR ?>"/><br /></p>
             <?php
             break;
         case "type":
