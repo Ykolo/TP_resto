@@ -118,7 +118,6 @@ CREATE TABLE `photo` (
 INSERT INTO `photo` (`idP`, `cheminP`, `idR`) VALUES
 (0, 'entrepote.jpg', 1),
 (2, 'sapporo.jpg', 3),
-(3, 'entrepote.jpg', 1),
 (4, 'barDuCharcutier.jpg', 2),
 (6, 'cidrerieDuFronton.jpg', 4),
 (7, 'agadir.jpg', 5),
