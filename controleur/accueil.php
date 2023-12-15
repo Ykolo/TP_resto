@@ -18,7 +18,7 @@ $menuBurger[] = Array("url"=>"./?action=recherche&critere=multi","label"=>"Reche
 ;
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-$listeRestos = getTop4Restos();
+$listeRestos = getTop5Restos();
 
 // traitement si necessaire des donnees recuperees
 ;

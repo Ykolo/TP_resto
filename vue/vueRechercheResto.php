@@ -13,10 +13,11 @@
             break;
         case "adresse":
             ?>
-            Recherche par adresse : <br />
-            <p style="color: red">Ville <input type="text" name="villeR" placeholder="ville" value="<?= $villeR ?>"/><br /></p>
-            <p style="color: red">Code Postal <input type="text" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/><br /></p>
-            <p style="color: red">Rue <input type="text" name="voieAdrR" placeholder="rue" value="<?= $voieAdrR ?>"/><br /></p>
+            Recherche par adresse : <br /><table>
+            <tr><td style="color:red"><label>Ville</label><input class="champ" type="text" name="villeR" placeholder="ville" value="<?= $villeR ?>"/><br /></tr></td>
+            <tr><td style="color:red"><label>Code Postal</label><input class="champ" type="text" name="cpR" placeholder="code postal" value="<?= $cpR ?>"/><br /></tr></td>
+            <tr><td style="color:red"><label>Rue</label><input class="champ" type="text" name="voieAdrR" placeholder="rue" value="<?= $voieAdrR ?>"/><br /></tr></td>
+        </table>
             <?php
             break;
         case "type":

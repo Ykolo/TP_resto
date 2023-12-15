@@ -37,12 +37,12 @@ function getRestos() {
     return $resultat;
 }
 
-function getTop4Restos() {
+function getTop5Restos() {
     $resultat = array();
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("select resto.*,sum(note) from resto, critiquer where resto.idR=critiquer.idR group by idR order by sum(note) desc limit 4 ");
+        $req = $cnx->prepare("select resto.*,sum(note) from resto, critiquer where resto.idR=critiquer.idR group by idR order by sum(note) desc limit 5 ");
         $req->execute();
 
         while ($ligne = $req->fetch(PDO::FETCH_ASSOC)) {
