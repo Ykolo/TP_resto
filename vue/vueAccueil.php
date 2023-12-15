@@ -1,5 +1,5 @@
 
-<div id="accroche">Decouvrez les meilleurs restaurants avec resto.fr</div>
+<div id="accroche">Découvrez les meilleurs restaurants avec resto.fr</div>
 
 <h1>Top 4 des meilleurs restaurants</h1>
 
