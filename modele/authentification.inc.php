@@ -1,6 +1,7 @@
 <?php
 
 include_once "bd.utilisateur.inc.php";
+ini_set('display_errors',0);
 
 function login($mailU, $mdpU) {
     if (!isset($_SESSION)) {
